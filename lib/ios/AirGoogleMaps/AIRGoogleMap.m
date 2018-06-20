@@ -118,7 +118,7 @@ id regionAsJSON(MKCoordinateRegion region) {
     [self.circles addObject:circle];
   } else if ([subview isKindOfClass:[AIRGoogleMapUrlTile class]]) {
     AIRGoogleMapUrlTile *tile = (AIRGoogleMapUrlTile*)subview;
-    tile.opacity = 0.4; // DIRTY hack to add opacity, TODO add opacity property to UrlTile
+    tile.tileLayer.opacity = 0.4; // DIRTY hack to add opacity, TODO add opacity property to UrlTile
     tile.tileLayer.map = self;
     [self.tiles addObject:tile];
   } else if ([subview isKindOfClass:[AIRGoogleMapOverlay class]]) {
